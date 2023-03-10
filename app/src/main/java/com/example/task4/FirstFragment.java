@@ -42,6 +42,14 @@ public class FirstFragment extends Fragment {
             }
         });
 
+        rightButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ThirdFragment thirdFragment = new ThirdFragment();
+                switchFrag(thirdFragment);
+            }
+        });
+
 
         return view;
     }

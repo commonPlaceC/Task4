@@ -5,4 +5,6 @@
     <string name="third_fragment">Third Fragment</string>
     <string name="second_fragment">Second Fragment</string>
     <string name="lists_app">Lists App</string>
+    <string name="listview">ListView</string>
+    <string name="recyclerview">RecyclerView</string>
 </resources>

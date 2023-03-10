@@ -28,13 +28,13 @@ public class SecondFragment extends Fragment {
         binding = FragmentSecondBinding.inflate(getLayoutInflater());
         View view = binding.getRoot();
 
-        ListView itemList = binding.listItem;
         List<Item> itemArrayList = new ArrayList<>();
         itemArrayList.add(new Item("1", R.drawable.java_logo));
         itemArrayList.add(new Item("2"));
         itemArrayList.add(new Item("3"));
 
-        ListViewAdapter adapter = new ListViewAdapter(requireContext(), R.layout.item, itemArrayList);
+        ListView itemList = binding.listItem;
+        MyListViewAdapter adapter = new MyListViewAdapter(requireContext(), R.layout.item, itemArrayList);
         itemList.setAdapter(adapter);
 
         itemList.setOnItemClickListener(new AdapterView.OnItemClickListener() {

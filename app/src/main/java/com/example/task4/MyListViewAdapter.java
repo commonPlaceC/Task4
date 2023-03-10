@@ -13,13 +13,13 @@ import androidx.annotation.NonNull;
 
 import java.util.List;
 
-public class ListViewAdapter extends ArrayAdapter<Item> {
+public class MyListViewAdapter extends ArrayAdapter<Item> {
 
     private final LayoutInflater inflater;
     private final int layout;
     private final List<Item> items;
 
-    public ListViewAdapter(@NonNull Context context, int resource, List<Item> items) {
+    public MyListViewAdapter(@NonNull Context context, int resource, List<Item> items) {
         super(context, resource, items);
         this.items = items;
         this.layout = resource;
