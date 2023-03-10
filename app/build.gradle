@@ -34,9 +34,10 @@ android {
 }
 
 dependencies {
+    def fragment_version = "1.5.5"
 
     implementation 'androidx.appcompat:appcompat:1.6.1'
-    implementation "androidx.fragment:fragment:1.6.0-alpha07"
+    implementation "androidx.fragment:fragment:$fragment_version"
     implementation 'com.google.android.material:material:1.8.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     testImplementation 'junit:junit:4.13.2'
