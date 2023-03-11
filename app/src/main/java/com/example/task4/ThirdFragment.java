@@ -25,10 +25,7 @@ public class ThirdFragment extends Fragment {
         binding = FragmentThirdBinding.inflate(getLayoutInflater());
         View view = binding.getRoot();
 
-        List<Item> itemArrayList = new ArrayList<>();
-        itemArrayList.add(new Item("1", R.drawable.java_logo));
-        itemArrayList.add(new Item("2"));
-        itemArrayList.add(new Item("3"));
+        List<Item> itemArrayList = (ArrayList<Item>)getArguments().getSerializable("itemList");
 
         RecyclerView itemList = binding.listItem;
         LinearLayoutManager layoutManager = new LinearLayoutManager(getContext());

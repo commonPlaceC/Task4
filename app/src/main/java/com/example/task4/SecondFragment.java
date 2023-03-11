@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -28,10 +29,7 @@ public class SecondFragment extends Fragment {
         binding = FragmentSecondBinding.inflate(getLayoutInflater());
         View view = binding.getRoot();
 
-        List<Item> itemArrayList = new ArrayList<>();
-        itemArrayList.add(new Item("1", R.drawable.java_logo));
-        itemArrayList.add(new Item("2"));
-        itemArrayList.add(new Item("3"));
+        List<Item> itemArrayList = (ArrayList<Item>)getArguments().getSerializable("itemList");
 
         ListView itemList = binding.listItem;
         MyListViewAdapter adapter = new MyListViewAdapter(requireContext(), R.layout.item, itemArrayList);
